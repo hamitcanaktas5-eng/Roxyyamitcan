@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Değerlendirmeler | ROXY STORE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="side-menu" class="side-nav">
+        <span class="close-menu" id="close-menu-btn">&times;</span>
+        <div class="menu-links">
+            <a href="index.html" class="menu-item">Ana Sayfa</a>
+            <a href="sms.html" class="menu-item">Sanal Numaralar</a>
+            <a href="smm.html" class="menu-item">Sosyal Medya</a>
+            <a href="degerlendirme.html" class="menu-item active">Değerlendirme</a>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <header class="navbar">
+            <div class="logo">ROXY STORE</div>
+            <div class="menu-icon" id="menu-toggle">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </div>
+        </header>
+
+        <section class="container">
+            <div class="query-action-center">
+                <button id="open-query-modal" class="premium-btn-outline">
+                    <i class="fa-solid fa-magnifying-glass"></i> Yorumlarımı ve Yanıtları Gör
+                </button>
+            </div>
+
+            <h2 class="page-title">Müşteri Deneyimleri</h2>
+
+            <div class="card glass-effect">
+                <h3 class="card-header"><i class="fa-solid fa-pen-to-square"></i> Değerlendirme Formu</h3>
+                <form id="review-form-main">
+                    <div class="pro-grid">
+                        <input type="text" placeholder="Ad Soyad" class="mega-field" required>
+                        <input type="email" placeholder="E-posta Adresiniz" class="mega-field" required>
+                    </div>
+                    
+                    <div class="rating-box">
+                        <span>Puan Verin:</span>
+                        <div class="star-rating">
+                            <input type="radio" id="s5" name="p" value="5"><label for="s5">★</label>
+                            <input type="radio" id="s4" name="p" value="4"><label for="s4">★</label>
+                            <input type="radio" id="s3" name="p" value="3"><label for="s3">★</label>
+                            <input type="radio" id="s2" name="p" value="2"><label for="s2">★</label>
+                            <input type="radio" id="s1" name="p" value="1"><label for="s1">★</label>
+                        </div>
+                    </div>
+
+                    <textarea rows="6" placeholder="Yorumunuzu buraya detaylıca yazın..." class="mega-area" required></textarea>
+                    
+                    <div class="security-notice">
+                        <i class="fa-solid fa-shield-check"></i>
+                        <span>İsminiz sistemde <b>Müşteri A.</b> şeklinde anonimleştirilecektir.</span>
+                    </div>
+
+                    <button type="submit" class="gradient-submit">Yorumu Gönder</button>
+                </form>
+            </div>
+
+            <div class="feed-section">
+                <h3 class="sub-heading">Güncel Değerlendirmeler</h3>
+                
+                <div class="pro-review-item">
+                    <div class="rev-top">
+                        <span class="rev-author">Caner A.</span>
+                        <span class="rev-stars">★★★★★</span>
+                    </div>
+                    <span class="rev-date">07 Şubat 2026</span>
+                    <p class="rev-msg">Harika bir hizmet, numaralar anında aktifleşiyor.</p>
+                    
+                    <div class="official-reply">
+                        <div class="reply-tag">ROXY STORE Yanıtı</div>
+                        <p>Memnuniyetiniz bizim için önemli, iyi kullanımlar dileriz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-pro">
+            <div class="support-container">
+                <a href="https://wa.me/447795203704" target="_blank" class="sup-btn wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp Destek</a>
+                <a href="https://t.me/roxysatici" target="_blank" class="sup-btn tg"><i class="fa-brands fa-telegram"></i> Telegram Destek</a>
+            </div>
+            <div class="copyright-bar">
+                <p>© 2026 <b>ROXY STORE</b> | Tüm Hakları Saklıdır.</p>
+            </div>
+        </footer>
+    </main>
+
+    <div id="query-modal" class="full-modal hidden">
+        <div class="modal-content">
+            <span class="close-trigger" id="close-modal">&times;</span>
+            <div class="modal-ui">
+                <h2>Yorum Sorgula</h2>
+                <p>Yorum yaparken kullandığınız mail adresini giriniz.</p>
+                <div class="modal-form">
+                    <input type="email" id="q-mail" placeholder="E-posta adresiniz..." class="mega-field">
+                    <button id="q-btn" class="gradient-submit">Sorgulamayı Başlat</button>
+                </div>
+                <div id="q-results"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
